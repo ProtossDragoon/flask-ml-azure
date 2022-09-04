@@ -1,0 +1,6 @@
+tensorflow>=2.0.0,<3.0.0
+Flask==3
+Jinja2==3
+pylint==2.6.2
+pandas
+nltk
