@@ -1,6 +1,5 @@
 tensorflow>=2.0.0,<3.0.0
-Flask==3
-Jinja2==3
-pylint==2.6.2
-pandas
+Flask>2.0.0
+Jinja2>3.0.0
+pylint>2.5.0
 nltk
