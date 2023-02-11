@@ -1,7 +1,10 @@
-from flask import Flask, request, jsonify
-import tensorflow as tf
-import numpy as np
+# 외장
 import logging
+
+# 서드파티
+import numpy as np
+import tensorflow as tf
+from flask import Flask, request, jsonify
 
 
 logging.basicConfig(level=logging.DEBUG)
@@ -29,7 +32,7 @@ def postprocessing(json_payload, prediction_tensor):
 
 @app.route("/")
 def home():
-    html = "<h3>Sklearn Prediction Home: From Azure Pipelines (Continuous Delivery)</h3>"
+    html = "<h3>애저 파이프라인을 이용한 지속적 배포</h3>"
     return html.format(format)
 
 
@@ -49,4 +52,5 @@ def predict():
     return jsonify(response)
 
 
-app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
