@@ -1,4 +1,4 @@
-# 외장
+# 빌트인
 import logging
 
 # 서드파티
